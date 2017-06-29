@@ -1,0 +1,36 @@
+USE TEST;
+
+DROP TABLE IF EXISTS `TEST`.`USER`;
+
+CREATE TABLE `TEST`.`USER`
+(
+  `ID` INT(8) NOT NULL  AUTO_INCREMENT,
+  `NAME` VARCHAR(25) NOT NULL,
+  `AGE` INT NOT NULL,
+  `IS_ADMIN` BIT NOT NULL,
+  `CREATED_DATE` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+);
+
+
+INSERT INTO `TEST`.`USER` (NAME, AGE, IS_ADMIN, CREATED_DATE) VALUES
+('Peter', 24, 1, '2013-01-15 14:30:15'),
+('Nick', 28, 0, '2013-02-01 12:38:24'),
+('Tomcat', 33, 0, '2013-08-12 14:32:27'),
+('Cretaceous', 44, 1, '2013-08-12 14:38:25'),
+('Piterson', 28, 1, '2013-08-25 12:17:17'),
+('Peter', 18, 0, '2014-04-23 09:25:36'),
+('Alex', 30, 0, '2014-10-12 12:47:33'),
+('Testoniarius', 23, 0, '2014-10-15 16:23:14'),
+('Nick', 32, 1, '2014-11-28 18:29:47'),
+('Tomas', 19, 0, '2015-02-17 12:33:51'),
+('Alex', 28, 0, '2015-07-06 16:18:45'),
+('Garry', 31, 1, '2015-12-23 10:31:12'),
+('Alexander', 40, 0, '2016-01-23 16:30:40'),
+('Mihaluch', 38, 0, '2016-08-21 15:12:50'),
+('Alex', 37, 0, '2016-10-13 10:03:27'),
+('Admin', 26, 1, '2016-10-13 11:12:56'),
+('Robert', 42, 0, '2016-11-15 10:15:30'),
+('Garry', 38, 1, '2017-02-03 09:00:00'),
+('Tomas', 27, 0, '2017-02-03 09:10:00'),
+('Robert', 40, 1, '2017-04-15 11:15:30');
